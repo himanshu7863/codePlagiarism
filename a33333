@@ -1,0 +1,25 @@
+#include <iostream>
+
+
+using namespace std;
+
+
+int main()
+{
+	int x;
+	cout << " ";
+	cin >> x;
+	if (x >= 1 && x <= 99)
+	{
+		if (x % 2 == 0) cout << "I-" << x << " is primary, going east/west." << endl;
+		else cout << "I-" << x << " is primary, going north/south." << endl;
+		return 0;
+	}
+	if (( x >= 100 && x <= 999))
+	{
+		cout << "I-" << x << " is auxiliary, serving I-" << x%100 << (((x%100)%2 == 0) ? " going east/west." : " going north/south.") << endl;
+		return 0;
+	}
+	cout << "You enter wrong highway!" << endl;
+	return 0;
+}
